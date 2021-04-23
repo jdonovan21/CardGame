@@ -1,8 +1,15 @@
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.*;
+import java.io.*;
+import java.net.*;
+import java.util.Map;
+
+
 public class Game
 {
-    private Card[][] cardArray;
-
-    private Deck theDeck = new Deck(cardArray);
+    //API Connection constants
+    private final static String URL = "https://deckofcardsapi.com/api/deck";
 
     public static void main(String[] args)
     {
@@ -22,5 +29,9 @@ public class Game
     public static void endGame()
     {
 
+    }
+
+    public static String getURL() {
+        return URL;
     }
 }

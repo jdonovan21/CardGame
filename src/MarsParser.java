@@ -115,7 +115,6 @@ public class MarsParser
                 "    ]\n" +
                 "  }\n" +
                 "}";
-
         try
         {
             JSONParser parser = new JSONParser();

@@ -1,11 +1,26 @@
 public class Deck
 {
-    Deck(Card[][] cardArray)
+    private Card[][] cardArray;
+
+    private String deckID;
+
+    Deck(Card[][] cardArray, String deckID)
     {
         cardArray = this.cardArray;
+        deckID = this.deckID;
     }
 
-    private Card[][] cardArray;
+
+    public Card[][] createDeck(Card[][] cardArray)
+    {
+        String requestURL;
+
+        requestURL = Game.getURL() + "/new" + "/draw" + "/?count=" + cardArray.length;
+
+        cardArray = this.cardArray;
+        return cardArray;
+    }
+
 
     public Card[][] shuffleCards(Card[][] cardArray)
     {
@@ -14,4 +29,6 @@ public class Deck
         cardArray = this.cardArray;
         return cardArray;
     }
+
+
 }
