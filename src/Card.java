@@ -28,27 +28,7 @@ public class Card
         this.faceUp = !this.faceUp;
     }
 
-    public void setSuit(char suit)
-    {
-        if (suit == 'd' || suit =='s' || suit == 'h' || suit == 'c')
-        {
-            suit = this.suit;
-        }
-    }
-
-    public void setValue(String value)
-    {
-        try
-        {
-            if (Integer.parseInt(value) >= 1 && Integer.parseInt(value) <= 10)
-            {
-                value = this.value;
-            }
-        } catch (Exception e){
-            if (value.equals("a") || value.equals("j") || value.equals("q") || value.equals("k"))
-            {
-                value = this.value;
-            }
-        }
+    public void matchCard() {
+        this.matched = !this.matched;
     }
 }
