@@ -1,6 +1,6 @@
 public class UserInterface
 {
-    public void dealCards(Card[][] cardArray)
+    public void dealCards(Card[] cardArray)
     {
         //Takes card Array and deals returns a string displaying card Array with flipped or unflipped cards
     }
