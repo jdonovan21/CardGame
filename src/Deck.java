@@ -42,10 +42,10 @@ public class Deck
             String testArray[] = {"KING", "QUEEN", "JACK", "10", "9", "8", "7", "6", "5", "4", "3", "2", "1"};
 
 
-            for (int j = 0; j < testArray.length; j++) {
-                if(cardMap.get("value").toString().equalsIgnoreCase(testArray[j]))
+            for (String j : testArray) {
+                if(cardMap.get("value").toString().equalsIgnoreCase(j))
                 {
-                    cardValueString = testArray[j];
+                    cardValueString = j;
                 }
             }
 
