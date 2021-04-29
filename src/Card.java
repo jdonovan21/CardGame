@@ -2,10 +2,10 @@ public class Card
 {
     Card(char suit, String value, boolean faceUp, boolean matched)
     {
-        suit = this.suit;
-        value = this.value;
-        faceUp = this.faceUp;
-        matched = this.matched;
+        this.suit= suit;
+        this.value = value;
+        this.faceUp = faceUp;
+        this.matched = matched;
     }
 
     private char suit;

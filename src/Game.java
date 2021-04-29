@@ -9,7 +9,7 @@ import java.util.Map;
 public class Game
 {
     //API Connection constants
-    private final static String URL = "https://deckofcardsapi.com/api/deck";
+    private final static String APIURL = "https://deckofcardsapi.com/api/deck";
 
     public static void main(String[] args)
     {
@@ -32,6 +32,6 @@ public class Game
     }
 
     public static String getURL() {
-        return URL;
+        return APIURL;
     }
 }
