@@ -18,10 +18,15 @@ public class Deck
     public void createDeck() throws Exception
     {
         //Creates temporary string to hold URL for use
-        String requestURL = Game.getURL() + "/new" + "/draw" + "/?count=" + cardArray.length/2;
+
+        String requestURL = Game.getURL() + "/new" + "/draw" + "/?count=" + cardArray.length;
+        //Creates a URL with the request URL string
+
         URL url = new URL(requestURL);
+        //Goes and gets input from URL
         BufferedReader in = new BufferedReader(
                 new InputStreamReader(url.openStream()));
+        //Parses JSON input from URL
         JSONParser parser = new JSONParser();
         JSONObject deckOfCardsJSON = (JSONObject) parser.parse(in);
         //Holds the JSON array of Cards gotten from the API
@@ -65,6 +70,23 @@ public class Deck
             cardArray[i + 1] = new Card(cardChar, cardValueString, false,false);
             i++;
         }
+
+        for (int i = 0; i < cardArray.length; i++)
+        {
+            System.out.print(cardArray[i].getSuit());
+            System.out.println(cardArray[i].getValue());
+        }
+
     }
 
+    public static void main(String[] args) throws Exception {
+        Deck d = new Deck(10);
+        d.createDeck();
+    }
+
+    public void shuffleCards()
+    {
+        //cardArray = the shuffled deck from API
+        //Set Card array to the class variable this.cardArray
+    }
 }
