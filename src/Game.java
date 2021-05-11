@@ -5,7 +5,6 @@ import java.io.*;
 import java.net.*;
 import java.util.Map;
 
-
 public class Game
 {
     //API Connection constants

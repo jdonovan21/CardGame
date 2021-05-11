@@ -18,7 +18,7 @@ public class Deck
     public void createDeck() throws Exception
     {
         //Creates temporary string to hold URL for use
-        String requestURL = Game.getURL() + "/new" + "/draw" + "/?count=" + cardArray.length;
+        String requestURL = Game.getURL() + "/new" + "/draw" + "/?count=" + cardArray.length/2;
         URL url = new URL(requestURL);
         BufferedReader in = new BufferedReader(
                 new InputStreamReader(url.openStream()));
@@ -61,13 +61,10 @@ public class Deck
             }
 
             //Filling final card array of cards with cardChar being the suit, and cardValueString being the value, default is false false for face up and matched
-            cardArray[i] = new Card (cardChar, cardValueString, false,false);
+            cardArray[i] = new Card(cardChar, cardValueString, false,false);
+            cardArray[i + 1] = new Card(cardChar, cardValueString, false,false);
+            i++;
         }
     }
-   
-    public void shuffleCards()
-    {
-        //cardArray = the shuffled deck from API
-        //Set Card array to the class variable this.cardArray
-    }
+
 }
