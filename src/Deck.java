@@ -70,23 +70,18 @@ public class Deck
             cardArray[i + 1] = new Card(cardChar, cardValueString, false,false);
             i++;
         }
-
+        /*
         for (int i = 0; i < cardArray.length; i++)
         {
             System.out.print(cardArray[i].getSuit());
             System.out.println(cardArray[i].getValue());
         }
-
+         */
     }
-
+    /*
     public static void main(String[] args) throws Exception {
         Deck d = new Deck(10);
         d.createDeck();
     }
-
-    public void shuffleCards()
-    {
-        //cardArray = the shuffled deck from API
-        //Set Card array to the class variable this.cardArray
-    }
+     */
 }

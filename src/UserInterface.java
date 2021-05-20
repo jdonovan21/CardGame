@@ -1,12 +1,22 @@
 public class UserInterface
 {
-    public void dealCards(Card[][] cardArray)
+    public static void displayCards(Card[] cardArray)
     {
-        //Takes card Array and deals returns a string displaying card Array with flipped or unflipped cards
+        //Takes card array and deals returns a string displaying card Array with flipped or unflipped cards
+        for(Card i : cardArray)
+        {
+            if(i.getFaceUp())
+            {
+                System.out.println(" " + i.getValue() + " " + i.getSuit());
+            }
+            else
+            {
+                System.out.println("*, ");
+            }
+        }
     }
-
-    public void matchCards()
+    public static void displaySelectedCard(Card card)
     {
-        //Takes User Input and checks to see if cards are matched
+        System.out.println(" " + card.getValue() + " " + card.getSuit());
     }
 }

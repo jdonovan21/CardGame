@@ -6,12 +6,14 @@ public class Card
         this.value = value;
         this.faceUp = faceUp;
         this.matched = matched;
+        selected = false;
     }
 
     private char suit;
     private String value;
     private boolean faceUp;
     private boolean matched;
+    private boolean selected;
 
     public char getSuit()
     {
@@ -25,10 +27,21 @@ public class Card
 
     public void flipCard()
     {
-        this.faceUp = !this.faceUp;
+        faceUp = !faceUp;
     }
 
-    public void matchCard() {
-        this.matched = !this.matched;
+    public boolean getFaceUp()
+    {
+        return faceUp;
+    }
+
+    public void setSelected()
+    {
+        selected = !selected;
+    }
+
+    public void matchCard()
+    {
+        matched = !matched;
     }
 }
