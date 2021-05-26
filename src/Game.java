@@ -12,9 +12,6 @@ public class Game
         System.out.println("Match the Cards, un-flipped cards are represented with *, and flipped cards show their values");
         Game.shuffleCards(deckOfCards.getDeck());
         UserInterface.displayCards(deckOfCards.getDeck());
-        for(while ){
-
-        }
 
         theGame.matchCards(deckOfCards.getDeck());
     }
