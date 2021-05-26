@@ -5,9 +5,18 @@ public class Game
     //API Connection constants
     private final static String APIURL = "https://deckofcardsapi.com/api/deck";
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) throws Exception {
+        Game theGame = new Game();
+        Deck deckOfCards = new Deck(10);
+        deckOfCards.createDeck();
+        System.out.println("Match the Cards, un-flipped cards are represented with *, and flipped cards show their values");
+        Game.shuffleCards(deckOfCards.getDeck());
+        UserInterface.displayCards(deckOfCards.getDeck());
+        for(while ){
 
+        }
+
+        theGame.matchCards(deckOfCards.getDeck());
     }
 
     public Card[] matchCards(Card[] cardArray)

@@ -14,6 +14,10 @@ public class Deck
         cardArray = new Card[cardArrayLength];
     }
 
+    public Card[] getDeck()
+    {
+        return cardArray;
+    }
 
     public void createDeck() throws Exception
     {
